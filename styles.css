@@ -204,3 +204,24 @@ button{font:inherit}
   .award h3,.award p{grid-column:2}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* v3 — actual project frames */
+.work-grid-v3{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.work-grid-v3 .work-card{aspect-ratio:16/10;border-radius:8px}
+.work-grid-v3 .work-card.work-wide{grid-column:span 2;aspect-ratio:16/7.9}
+.work-grid-v3 .work-overlay{padding:26px;background:linear-gradient(0deg,rgba(5,7,10,.9),rgba(5,7,10,.06) 66%)}
+.work-grid-v3 .work-overlay h3{font-size:clamp(20px,1.65vw,27px)}
+.work-grid-v3 .work-overlay p{color:#c5cad2}
+.hero-media img{object-position:center 44%}
+.showreel-frame img{object-position:center 28%}
+.contact-bg img{object-position:center 55%}
+@media(max-width:900px){
+  .work-grid-v3{grid-template-columns:1fr 1fr}
+  .work-grid-v3 .work-card.work-wide{grid-column:span 2;aspect-ratio:16/8.5}
+}
+@media(max-width:620px){
+  .work-grid-v3{grid-template-columns:1fr}
+  .work-grid-v3 .work-card,.work-grid-v3 .work-card.work-wide{grid-column:auto;aspect-ratio:16/10}
+  .work-grid-v3 .work-overlay{padding:20px}
+  .hero-media img{object-position:58% center}
+}
