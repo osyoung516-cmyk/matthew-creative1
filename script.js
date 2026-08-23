@@ -26,3 +26,10 @@ const io = new IntersectionObserver((entries) => {
 }, { threshold: 0.12, rootMargin: '0px 0px -4% 0px' });
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+
+const backToTop = document.querySelector('#back-to-top');
+backToTop?.addEventListener('click', (e) => {
+  e.preventDefault();
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+});
