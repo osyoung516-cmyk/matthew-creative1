@@ -165,6 +165,10 @@ button{font:inherit}
 .footer-inner>div{display:flex;align-items:center;gap:12px}
 .footer-inner strong{color:#e8ebef;font-size:12px;letter-spacing:.11em}
 .footer-inner span{letter-spacing:.1em}
+.footer-traffic{display:flex;align-items:center;gap:7px;color:#6f7783;font-size:9px;letter-spacing:.12em;white-space:nowrap}
+.footer-traffic span{display:inline-flex;align-items:center;gap:5px}
+.footer-traffic strong{color:#aeb5bf;font-size:10px;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.footer-traffic i{font-style:normal;color:#454b55}
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1)}
 .reveal.visible{opacity:1;transform:none}
 @keyframes heroMove{from{transform:scale(1.04) translate3d(0,0,0)}to{transform:scale(1.09) translate3d(-1.2%,.5%,0)}}
@@ -212,6 +216,7 @@ button{font:inherit}
   .contact-card>div:not(.contact-buttons){grid-template-columns:1fr;gap:7px}
   .contact-buttons{flex-direction:column}
   .footer-inner{flex-direction:column;align-items:flex-start}
+  .footer-traffic{order:3;margin-top:2px}
   .awards{padding:78px 0 92px}
   .award{grid-template-columns:62px minmax(0,1fr);column-gap:18px;padding:24px 0}
   .award span{font-size:13px;padding-top:2px}
