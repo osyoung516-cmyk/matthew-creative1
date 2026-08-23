@@ -35,37 +35,68 @@ backToTop?.addEventListener('click', (e) => {
 });
 
 // GoatCounter visitor counter for osyoung88.goatcounter.com.
-// The same service records pageviews and supplies TODAY / TOTAL counts.
+// Use GoatCounter's official visitor-counter renderer rather than a cross-origin fetch.
 (() => {
   const todayEl = document.querySelector('#visitor-today');
   const totalEl = document.querySelector('#visitor-total');
   if (!todayEl || !totalEl) return;
 
-  const counterBase = 'https://osyoung88.goatcounter.com/counter/TOTAL.json';
-  const format = (value) => {
-    const n = Number(String(value ?? '').replace(/,/g, ''));
-    return Number.isFinite(n) ? new Intl.NumberFormat('ko-KR').format(n) : (value || '—');
-  };
-
-  // GoatCounter's public visitor-counter endpoint supports start/end date filters.
-  // Use the visitor's local calendar date for TODAY; TOTAL has no date filter.
   const now = new Date();
   const yyyy = now.getFullYear();
   const mm = String(now.getMonth() + 1).padStart(2, '0');
   const dd = String(now.getDate()).padStart(2, '0');
   const today = `${yyyy}-${mm}-${dd}`;
 
-  Promise.allSettled([
-    fetch(counterBase, { cache: 'no-store' }).then(r => {
-      if (!r.ok) throw new Error(`GoatCounter total: ${r.status}`);
-      return r.json();
-    }),
-    fetch(`${counterBase}?start=${encodeURIComponent(today)}`, { cache: 'no-store' }).then(r => {
-      if (!r.ok) throw new Error(`GoatCounter today: ${r.status}`);
-      return r.json();
-    })
-  ]).then(([totalResult, todayResult]) => {
-    totalEl.textContent = totalResult.status === 'fulfilled' ? format(totalResult.value.count) : '—';
-    todayEl.textContent = todayResult.status === 'fulfilled' ? format(todayResult.value.count) : '—';
-  });
+  const gcStyle = `
+    div {
+      display: inline !important;
+      width: auto !important;
+      height: auto !important;
+      min-width: 0 !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border: 0 !important;
+      background: transparent !important;
+      color: #aeb5bf !important;
+      font: inherit !important;
+      line-height: inherit !important;
+    }
+    #gcvc-for, #gcvc-by { display: none !important; }
+    #gcvc-views {
+      color: #aeb5bf !important;
+      font: inherit !important;
+      line-height: inherit !important;
+    }
+  `;
+
+  let tries = 0;
+  const timer = setInterval(() => {
+    tries += 1;
+    if (window.goatcounter && typeof window.goatcounter.visit_count === 'function') {
+      clearInterval(timer);
+      todayEl.textContent = '';
+      totalEl.textContent = '';
+
+      window.goatcounter.visit_count({
+        append: '#visitor-today',
+        type: 'html',
+        path: 'TOTAL',
+        start: today,
+        no_branding: true,
+        style: gcStyle
+      });
+
+      window.goatcounter.visit_count({
+        append: '#visitor-total',
+        type: 'html',
+        path: 'TOTAL',
+        no_branding: true,
+        style: gcStyle
+      });
+    } else if (tries >= 100) {
+      clearInterval(timer);
+      todayEl.textContent = '—';
+      totalEl.textContent = '—';
+    }
+  }, 100);
 })();

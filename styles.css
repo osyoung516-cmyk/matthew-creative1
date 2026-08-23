@@ -250,3 +250,23 @@ button{font:inherit}
   .work-grid-v3 .work-overlay{padding:20px}
   .hero-media img{object-position:58% center}
 }
+
+/* GoatCounter inline footer counters */
+#visitor-today > div,
+#visitor-total > div{
+  display:inline!important;
+  width:auto!important;
+  min-width:0!important;
+  height:auto!important;
+  padding:0!important;
+  margin:0!important;
+  border:0!important;
+  background:transparent!important;
+  box-shadow:none!important;
+}
+#visitor-today #gcvc-for,
+#visitor-today #gcvc-by,
+#visitor-total #gcvc-for,
+#visitor-total #gcvc-by{display:none!important}
+#visitor-today #gcvc-views,
+#visitor-total #gcvc-views{font:inherit!important;color:inherit!important}
