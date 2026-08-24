@@ -13,3 +13,6 @@ Matthew Creative portfolio website.
 - v4.8.6: GoatCounter TOTAL/TODAY CORS 대응 및 실제 사이트 전체 카운트 표시 수정
 
 - v4.8.7: TODAY/TOTAL 공개 카운터 유지 (GoatCounter 캐시 지연 허용)
+
+
+- v4.9.1: PC/모바일 전체 반응형 타이포, safe-area, 여백, 카드/섹션 리듬, 이미지 로딩 최적화

@@ -25,7 +25,7 @@
       src: url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/woff2/PretendardVariable.woff2") format("woff2-variations");
     }
   </style>
-  <link rel="stylesheet" href="styles.css?v=4.8.6" />
+  <link rel="stylesheet" href="styles.css?v=4.9.1" />
 </head>
 <body>
   <div class="noise" aria-hidden="true"></div>
@@ -49,7 +49,7 @@
       <div class="hero-media" aria-hidden="true">
         <picture class="hero-picture">
           <source media="(max-width: 768px)" srcset="assets/hero-production-mobile.webp" />
-          <img src="assets/hero-production-v5.webp" alt="" />
+          <img src="assets/hero-production-v5.webp" alt="" fetchpriority="high" decoding="async" />
         </picture>
       </div>
       <div class="hero-gradient" aria-hidden="true"></div>
@@ -59,10 +59,7 @@
           작게 움직이고,<br />
           <span>프로덕션처럼 완성하다.</span>
         </h1>
-        <p class="hero-copy reveal">
-          기획부터 촬영, 조명, 드론, 편집, 색보정까지.<br />
-          하나의 디렉팅으로 처음부터 끝까지 톤을 이어갑니다.
-        </p>
+        <p class="hero-copy reveal responsive-copy"><span class="copy-desktop"><span>기획부터 촬영, 조명, 드론, 편집, 색보정까지.</span><span>하나의 디렉팅으로 처음부터 끝까지 톤을 이어갑니다.</span></span><span class="copy-mobile"><span>기획부터 촬영, 조명, 드론, 편집, 색보정까지.</span><span>하나의 디렉팅으로 처음부터 끝까지 톤을 이어갑니다.</span></span></p>
         <div class="hero-actions reveal">
           <a class="btn btn-primary" href="#works">작업 보기 <span>↓</span></a>
           <a class="btn btn-ghost" href="#contact">프로젝트 문의</a>
@@ -78,7 +75,10 @@
         <div class="section-kicker reveal">01 · HOW WE WORK</div>
         <div class="statement-main reveal">
           <h2><span class="split-line">영상이 필요한 순간은</span> <span class="split-line">많아졌지만,</span> <span class="split-line">제작은 여전히 어렵고</span> <span class="split-line">복잡합니다.</span></h2>
-          <p>Matthew Creative는 한 명의 디렉터가 프로젝트의 중심을 잡고, 규모와 목적에 맞춰 필요한 역할을 유연하게 구성합니다. 중간 전달을 줄이고, 결정은 빠르게, 결과물의 톤은 끝까지 일관되게 가져갑니다.</p>
+          <p class="balanced-copy responsive-copy">
+            <span class="copy-desktop"><span>Matthew Creative는 한 명의 디렉터가 프로젝트의 중심을 잡고, 규모와 목적에 맞춰 필요한 역할을 유연하게 구성합니다.</span><span>중간 전달을 줄이고, 결정은 빠르게, 결과물의 톤은 끝까지 일관되게 가져갑니다.</span></span>
+            <span class="copy-mobile"><span>Matthew Creative는 한 명의 디렉터가 프로젝트의</span><span>중심을 잡고, 규모와 목적에 맞춰 필요한 역할을</span><span>유연하게 구성합니다.</span><span>중간 전달을 줄이고, 결정은 빠르게,</span><span>결과물의 톤은 끝까지 일관되게 가져갑니다.</span></span>
+          </p>
         </div>
         <div class="metrics reveal">
           <div class="metric"><strong>10Y+</strong><span>현장에서 쌓은 제작 경험</span></div>
@@ -91,13 +91,16 @@
     <section class="director section-mid">
       <div class="container director-grid">
         <div class="director-photo reveal">
-          <img src="assets/director-ohseyoung.webp" alt="오세영 대표" />
+          <img src="assets/director-ohseyoung.webp" alt="오세영 대표" loading="lazy" decoding="async" />
           <div class="photo-glow" aria-hidden="true"></div>
         </div>
         <div class="director-copy reveal">
           <p class="eyebrow">DIRECTOR · OH SE YOUNG</p>
           <h2>디렉터 중심<br />제작 시스템</h2>
-          <p class="lead">영화적 시선과 현장 경험을 기반으로, 브랜드와 프로젝트의 목적에 맞는 영상을 기획부터 완성까지 직접 설계합니다.</p>
+          <p class="lead responsive-copy">
+            <span class="copy-desktop"><span>영화적 시선과 현장 경험을 기반으로, 브랜드와 프로젝트의 목적에 맞는 영상을</span><span>기획부터 완성까지 직접 설계합니다.</span></span>
+            <span class="copy-mobile"><span>영화적 시선과 현장 경험을 기반으로,</span><span>브랜드와 프로젝트의 목적에 맞는 영상을</span><span>기획부터 완성까지 직접 설계합니다.</span></span>
+          </p>
           <div class="bio-list">
             <div><span>EDUCATION</span><p>서울예술대학교 영화과 졸업</p></div>
             <div><span>CAREER</span><p>영화·TV CF 촬영팀 → 영상 제작 전 공정 수행</p></div>
@@ -114,7 +117,10 @@
             <p class="section-kicker dark">02 · SERVICES</p>
             <h2>목적에 맞는 방식으로<br />제작합니다.</h2>
           </div>
-          <p>장르를 나열하기보다, 클라이언트가 영상을 사용하는 목적에서 출발합니다.</p>
+          <p class="balanced-copy responsive-copy">
+            <span class="copy-desktop"><span>장르를 나열하기보다, 클라이언트가 영상을 사용하는 목적에서 출발합니다.</span></span>
+            <span class="copy-mobile"><span>장르를 나열하기보다, 클라이언트가 영상을</span><span>사용하는 목적에서 출발합니다.</span></span>
+          </p>
         </div>
         <div class="service-grid">
           <article class="service-card reveal">
@@ -146,48 +152,51 @@
             <p class="section-kicker">03 · SELECTED WORKS</p>
             <h2>서로 다른 장르,<br />하나의 제작 기준.</h2>
           </div>
-          <p>교육·기관, 브랜드, 스포츠, 공연과 뮤직 콘텐츠까지. 최근 작업의 실제 프레임을 중심으로 구성했습니다.</p>
+          <p class="balanced-copy responsive-copy">
+            <span class="copy-desktop"><span>교육·기관, 브랜드, 스포츠, 공연과 뮤직 콘텐츠까지.</span><span>최근 작업의 실제 프레임을 중심으로 구성했습니다.</span></span>
+            <span class="copy-mobile"><span>교육·기관, 브랜드, 스포츠, 공연과 뮤직 콘텐츠까지.</span><span>최근 작업의 실제 프레임을 중심으로 구성했습니다.</span></span>
+          </p>
         </div>
 
         <div class="work-grid work-grid-v3">
           <article class="work-card work-wide reveal">
-            <img src="assets/work-koreatech-stage.webp" alt="한국기술교육대학교 축제 공연 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-koreatech-stage.webp" alt="한국기술교육대학교 축제 공연 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>EVENT / PERFORMANCE</span><h3>한국기술교육대학교 축제</h3><p>Festival & Performance Film</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-harley.webp" alt="할리플레이 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-harley.webp" alt="할리플레이 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>LIFESTYLE / BRANDED</span><h3>할리플레이</h3><p>Harley-Davidson Lifestyle Content</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-bcu-interior.webp" alt="백석문화대학교 실내건축디자인과 CF 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-bcu-interior.webp" alt="백석문화대학교 실내건축디자인과 CF 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>UNIVERSITY / CF</span><h3>백석문화대학교</h3><p>실내건축디자인과 CF</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-bcu-media.webp" alt="백석문화대학교 방송영상과 뉴미디어영상과 CF 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-bcu-media.webp" alt="백석문화대학교 방송영상과 뉴미디어영상과 CF 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>UNIVERSITY / CF</span><h3>백석문화대학교</h3><p>방송영상과 · 뉴미디어영상과 CF</p></div></div>
           </article>
           <article class="work-card work-wide reveal">
-            <img src="assets/work-koreatech-festival.webp" alt="한국기술교육대학교 체육대회 축제 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-koreatech-festival.webp" alt="한국기술교육대학교 체육대회 축제 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>CAMPUS / EVENT</span><h3>한국기술교육대학교</h3><p>체육대회 · 축제 콘텐츠</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-jangan.webp" alt="장안대학교 패션주얼리디자인과 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-jangan.webp" alt="장안대학교 패션주얼리디자인과 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>UNIVERSITY / CONTENT</span><h3>장안대학교</h3><p>패션주얼리디자인과</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-joongbu-volleyball.webp" alt="중부대학교 배구부 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-joongbu-volleyball.webp" alt="중부대학교 배구부 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>SPORTS</span><h3>중부대학교 배구부</h3><p>Sports Content</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-forestry.webp" alt="임업 교육 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-forestry.webp" alt="임업 교육 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>INSTITUTION / DOCUMENTARY</span><h3>대한민국 임업 교육</h3><p>Education & Institutional Content</p></div></div>
           </article>
           <article class="work-card reveal">
-            <img src="assets/work-love-disco.webp" alt="LOVE DISCO 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-love-disco.webp" alt="LOVE DISCO 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>MUSIC / PERFORMANCE</span><h3>LOVE DISCO</h3><p>Music Performance</p></div></div>
           </article>
           <article class="work-card work-wide reveal">
-            <img src="assets/work-hebichi.webp" alt="너와 함께 음악 프로젝트 프레임" loading="lazy" />
+            <img src="assets/work-hebichi.webp" alt="너와 함께 음악 프로젝트 프레임" loading="lazy" decoding="async" />
             <div class="work-overlay"><div><span>MUSIC / LIVE SESSION</span><h3>너와 함께</h3><p>Music Film</p></div></div>
           </article>
         </div>
@@ -217,7 +226,7 @@
           </div>
         </div>
         <a class="showreel-frame reveal" href="https://youtu.be/D97XtKVZrRY" target="_blank" rel="noopener" aria-label="쇼릴 재생">
-          <img src="assets/showreel-festival.webp" alt="쇼릴 미리보기" loading="lazy" />
+          <img src="assets/showreel-festival.webp" alt="쇼릴 미리보기" loading="lazy" decoding="async" />
           <span class="play">▶</span>
           <div class="showreel-label">SHOWREEL · 02:21</div>
         </a>
@@ -231,7 +240,10 @@
             <p class="section-kicker dark">05 · PROCESS</p>
             <h2>과정은 단순하게,<br />책임 범위는 분명하게.</h2>
           </div>
-          <p>한 명의 디렉터가 전 과정을 이해하기 때문에 수정 방향은 빠르고, 결과물의 톤은 끝까지 이어집니다.</p>
+          <p class="balanced-copy responsive-copy">
+            <span class="copy-desktop"><span>한 명의 디렉터가 전 과정을 이해하기 때문에</span><span>수정 방향은 빠르고 결과물의 톤은 끝까지 이어집니다.</span></span>
+            <span class="copy-mobile"><span>한 명의 디렉터가 전 과정을 이해하기 때문에</span><span>수정 방향은 빠르고 결과물의 톤은 끝까지 이어집니다.</span></span>
+          </p>
         </div>
         <ol class="process-list">
           <li class="reveal"><span>01</span><div><h3>Brief</h3><p>목적 · 타깃 · 예산 · 일정 정리</p></div></li>
@@ -249,11 +261,14 @@
         <div class="scale-title reveal">
           <p class="section-kicker">06 · FLEXIBLE PRODUCTION</p>
           <h2>필요한 만큼<br />커지는 제작.</h2>
-          <p>소규모 프로젝트는 직접, 규모가 커지면 검증된 전문 인력을 결합합니다. 고정비보다 결과물에 필요한 리소스에 집중합니다.</p>
+          <p class="balanced-copy responsive-copy">
+            <span class="copy-desktop"><span>소규모 프로젝트는 직접, 규모가 커지면 검증된 전문 인력을 결합합니다.</span><span>고정비보다 결과물에 필요한 리소스에 집중합니다.</span></span>
+            <span class="copy-mobile"><span>소규모 프로젝트는 직접, 규모가 커지면</span><span>검증된 전문 인력을 결합합니다.</span><span>고정비보다 결과물에 필요한</span><span>리소스에 집중합니다.</span></span>
+          </p>
         </div>
         <div class="scale-cards">
           <article class="scale-card reveal"><span>DIRECT</span><h3>직접 제작</h3><p>빠른 납품과 효율이 중요한 프로젝트</p></article>
-          <article class="scale-card reveal"><span>EXPAND</span><h3>전문 인력 결합</h3><p>조명 · 음향 · 서브 촬영 · 후반 등 필요 파트 확장</p></article>
+          <article class="scale-card reveal"><span>EXPAND</span><h3>전문 인력 결합</h3><p class="responsive-copy"><span class="copy-desktop"><span>조명 · 음향 · 서브 촬영 · 후반 등 필요 파트 확장</span></span><span class="copy-mobile"><span>조명 · 음향 · 서브 촬영 · 후반 등</span><span>필요 파트 확장</span></span></p></article>
           <article class="scale-card reveal"><span>ONE TONE</span><h3>디렉터가 톤 통제</h3><p>팀이 커져도 방향과 결과물의 톤은 하나로</p></article>
         </div>
       </div>
@@ -296,7 +311,10 @@
         <div class="contact-copy reveal">
           <p class="section-kicker">LET'S MAKE SOMETHING</p>
           <h2>기획부터 납품까지,<br />한 톤으로 완성합니다.</h2>
-          <p>프로젝트의 목적, 일정, 예산을 알려주시면 가장 효율적인 제작 방식부터 함께 정리하겠습니다.</p>
+          <p class="contact-lead responsive-copy">
+            <span class="copy-desktop"><span>프로젝트의 목적, 일정, 예산을 알려주시면</span><span>가장 효율적인 제작 방식부터 함께 정리하겠습니다.</span></span>
+            <span class="copy-mobile"><span>프로젝트의 목적, 일정, 예산을 알려주시면</span><span>가장 효율적인 제작 방식부터 함께 정리하겠습니다.</span></span>
+          </p>
         </div>
         <div class="contact-card reveal">
           <div><span>DIRECTOR</span><strong>오세영 · Matthew Creative</strong></div>
