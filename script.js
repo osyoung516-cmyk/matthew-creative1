@@ -39,7 +39,11 @@ backToTop?.addEventListener('click', (e) => {
   const totalEl = document.querySelector('#visitor-total');
   if (!todayEl || !totalEl) return;
 
-  const counterBase = 'https://osyoung88.goatcounter.com/counter/TOTAL.json';
+  // GoatCounter visitor counter URLs are path-specific. This site is a
+  // single-page portfolio, so TODAY/TOTAL should read the actual home path (/),
+  // not a literal path named "TOTAL".
+  const pagePath = '/';
+  const counterBase = `https://osyoung88.goatcounter.com/counter/${encodeURIComponent(pagePath)}.json`;
   const formatCount = (value) => {
     const normalized = String(value ?? '').replace(/[\s,\u00a0\u202f]/g, '');
     const n = Number(normalized);
@@ -61,7 +65,9 @@ backToTop?.addEventListener('click', (e) => {
     req.addEventListener('error', function () {
       target.textContent = '—';
     });
-    req.open('GET', url);
+    const separator = url.includes('?') ? '&' : '?';
+    req.open('GET', `${url}${separator}_=${Date.now()}`);
+    req.setRequestHeader('Cache-Control', 'no-cache');
     req.send();
   };
 
