@@ -259,3 +259,124 @@ button{font:inherit}
 .site-footer [class*="goatcounter"],
 .site-footer [id*="goatcounter"]{display:none!important;width:0!important;height:0!important;border:0!important;padding:0!important;margin:0!important}
 .footer-traffic strong{display:inline!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;width:auto!important;height:auto!important;min-width:0!important}
+
+.hero-picture{display:block;width:100%;height:100%}
+.hero-picture img{width:100%;height:100%;display:block}
+
+@media (max-width: 768px){
+  .hero{min-height:100svh;padding:118px 0 90px}
+  .hero-media img{object-position:center center}
+  .hero-gradient{
+    background:
+      linear-gradient(90deg, rgba(5,7,10,.78) 0%, rgba(5,7,10,.52) 46%, rgba(5,7,10,.14) 74%, rgba(5,7,10,0) 100%),
+      linear-gradient(0deg, rgba(5,7,10,.52) 0%, rgba(5,7,10,.10) 42%, rgba(5,7,10,0) 72%);
+  }
+}
+
+
+/* v4.8.2 — mobile responsive fix */
+.mobile-title-break{display:none}
+
+@media (max-width: 768px){
+  html,body{max-width:100%;overflow-x:hidden}
+  .site-header{
+    width:100%;
+    height:64px;
+    padding:0 16px;
+    gap:12px;
+  }
+  .brand{
+    min-width:0;
+    gap:8px;
+    font-size:11px;
+    letter-spacing:.08em;
+    white-space:nowrap;
+  }
+  .brand-mark{width:12px;height:12px;flex:0 0 12px}
+  .menu-btn{
+    display:block;
+    flex:0 0 auto;
+    padding:10px 0 10px 12px;
+    font-size:11px;
+    white-space:nowrap;
+  }
+  .site-nav{
+    top:64px;
+    left:10px;
+    right:10px;
+    width:auto;
+    max-height:calc(100svh - 76px);
+    overflow:auto;
+  }
+  .site-nav a{
+    width:100%;
+    font-size:12px;
+    padding:14px 12px;
+  }
+
+  .container{width:calc(100% - 32px);max-width:none}
+  .hero{
+    min-height:100svh;
+    padding:104px 0 72px;
+    align-items:flex-end;
+  }
+  .hero-content{
+    width:100%;
+    max-width:100%;
+    padding-right:0;
+  }
+  .eyebrow{
+    margin-bottom:14px;
+    font-size:10px;
+    letter-spacing:.11em;
+  }
+  .hero-title{
+    max-width:100%;
+    margin-bottom:22px;
+    font-size:clamp(34px,9.4vw,42px);
+    line-height:1.04;
+    letter-spacing:-.045em;
+    word-break:normal;
+    overflow-wrap:break-word;
+  }
+  .hero-title span{display:block}
+  .mobile-title-break{display:inline}
+  .hero-copy{
+    max-width:92%;
+    margin-bottom:24px;
+    font-size:15px;
+    line-height:1.7;
+    word-break:normal;
+  }
+  .hero-copy br{display:none}
+  .hero-actions{
+    width:100%;
+    gap:10px;
+  }
+  .hero-actions .btn{
+    min-height:46px;
+    padding:0 17px;
+    font-size:12px;
+  }
+
+  .hero-media img{object-position:center center}
+  .hero-gradient{
+    background:
+      linear-gradient(90deg,rgba(5,7,10,.80) 0%,rgba(5,7,10,.58) 42%,rgba(5,7,10,.20) 70%,rgba(5,7,10,.04) 100%),
+      linear-gradient(0deg,rgba(5,7,10,.62) 0%,rgba(5,7,10,.16) 46%,rgba(5,7,10,0) 72%);
+  }
+
+  .statement-main h2,
+  .section-head h2{font-size:clamp(34px,9vw,40px);word-break:normal}
+  .director-copy h2{font-size:clamp(42px,11vw,52px)}
+  .showreel-copy h2{font-size:clamp(44px,12vw,58px)}
+}
+
+@media (max-width: 390px){
+  .site-header{padding:0 13px}
+  .brand{font-size:10px;letter-spacing:.06em}
+  .hero-title{font-size:33px}
+  .hero-copy{font-size:14px;max-width:96%}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .hero-actions .btn{width:auto}
+}
