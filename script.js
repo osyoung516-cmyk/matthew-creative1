@@ -35,11 +35,37 @@ backToTop?.addEventListener('click', (e) => {
 });
 
 // GoatCounter visitor counter for osyoung88.goatcounter.com.
-// Use GoatCounter's official visitor-counter renderer rather than a cross-origin fetch.
+// Fetch the public JSON counter and render only the number so the footer stays native to the site design.
 (() => {
   const todayEl = document.querySelector('#visitor-today');
   const totalEl = document.querySelector('#visitor-total');
   if (!todayEl || !totalEl) return;
+
+  const counterBase = 'https://osyoung88.goatcounter.com/counter/TOTAL.json';
+  const formatCount = (value) => {
+    const normalized = String(value ?? '').replace(/[\s,\u00a0\u202f]/g, '');
+    const n = Number(normalized);
+    return Number.isFinite(n) ? new Intl.NumberFormat('ko-KR').format(n) : (value || '—');
+  };
+
+  const requestCount = (url, target) => {
+    const req = new XMLHttpRequest();
+    req.addEventListener('load', function () {
+      try {
+        if (this.status < 200 || this.status >= 300) throw new Error(`HTTP ${this.status}`);
+        const data = JSON.parse(this.responseText);
+        target.textContent = formatCount(data.count);
+      } catch (err) {
+        target.textContent = '—';
+        console.warn('GoatCounter visitor counter:', err);
+      }
+    });
+    req.addEventListener('error', function () {
+      target.textContent = '—';
+    });
+    req.open('GET', url);
+    req.send();
+  };
 
   const now = new Date();
   const yyyy = now.getFullYear();
@@ -47,56 +73,6 @@ backToTop?.addEventListener('click', (e) => {
   const dd = String(now.getDate()).padStart(2, '0');
   const today = `${yyyy}-${mm}-${dd}`;
 
-  const gcStyle = `
-    div {
-      display: inline !important;
-      width: auto !important;
-      height: auto !important;
-      min-width: 0 !important;
-      padding: 0 !important;
-      margin: 0 !important;
-      border: 0 !important;
-      background: transparent !important;
-      color: #aeb5bf !important;
-      font: inherit !important;
-      line-height: inherit !important;
-    }
-    #gcvc-for, #gcvc-by { display: none !important; }
-    #gcvc-views {
-      color: #aeb5bf !important;
-      font: inherit !important;
-      line-height: inherit !important;
-    }
-  `;
-
-  let tries = 0;
-  const timer = setInterval(() => {
-    tries += 1;
-    if (window.goatcounter && typeof window.goatcounter.visit_count === 'function') {
-      clearInterval(timer);
-      todayEl.textContent = '';
-      totalEl.textContent = '';
-
-      window.goatcounter.visit_count({
-        append: '#visitor-today',
-        type: 'html',
-        path: 'TOTAL',
-        start: today,
-        no_branding: true,
-        style: gcStyle
-      });
-
-      window.goatcounter.visit_count({
-        append: '#visitor-total',
-        type: 'html',
-        path: 'TOTAL',
-        no_branding: true,
-        style: gcStyle
-      });
-    } else if (tries >= 100) {
-      clearInterval(timer);
-      todayEl.textContent = '—';
-      totalEl.textContent = '—';
-    }
-  }, 100);
+  requestCount(counterBase, totalEl);
+  requestCount(`${counterBase}?start=${encodeURIComponent(today)}&end=${encodeURIComponent(today)}`, todayEl);
 })();
