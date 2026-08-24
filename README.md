@@ -16,3 +16,6 @@ Matthew Creative portfolio website.
 
 
 - v4.9.1: PC/모바일 전체 반응형 타이포, safe-area, 여백, 카드/섹션 리듬, 이미지 로딩 최적화
+
+
+- v4.9.2: Microsoft Clarity(y7isd6vxdf) + GA4(G-GRNVQK2Z5Y) 추가, GoatCounter 유지
