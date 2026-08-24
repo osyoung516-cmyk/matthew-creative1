@@ -36,8 +36,8 @@ button{font:inherit}
 .section-kicker.dark{color:#665ce8}
 .hero{min-height:100svh;display:flex;align-items:flex-end;padding:150px 0 116px}
 .hero-media{position:absolute;inset:0;overflow:hidden}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% center;transform:scale(1.01);filter:saturate(.98) contrast(1.02) brightness(1.03);animation:heroMove 18s ease-in-out infinite alternate}
-.hero-gradient{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,10,.48) 0%,rgba(5,7,10,.24) 30%,rgba(5,7,10,.08) 52%,rgba(5,7,10,0) 72%),linear-gradient(0deg,rgba(5,7,10,.42) 0%,rgba(5,7,10,.10) 36%,transparent 62%)}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:60% center;transform:scale(1.025);filter:saturate(.92) contrast(1.04) brightness(.92);animation:heroMove 18s ease-in-out infinite alternate}
+.hero-gradient{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,10,.97) 0%,rgba(5,7,10,.88) 29%,rgba(5,7,10,.58) 48%,rgba(5,7,10,.20) 68%,rgba(5,7,10,.08) 100%),linear-gradient(0deg,rgba(5,7,10,.82) 0%,rgba(5,7,10,.18) 42%,transparent 68%)}
 .hero-content{position:relative;z-index:2}
 .hero-title{font-size:clamp(54px,7.5vw,110px);line-height:.98;letter-spacing:-.055em;margin:0 0 34px;max-width:1000px;font-weight:850}
 .hero-title span{color:#fff}
@@ -180,7 +180,7 @@ button{font:inherit}
   .site-nav.open{display:flex}
   .site-nav a{padding:14px 10px;border-bottom:1px solid var(--line)}
   .hero{padding:130px 0 100px;min-height:92svh}
-  .hero-gradient{background:linear-gradient(90deg,rgba(5,7,10,.68),rgba(5,7,10,.18)),linear-gradient(0deg,rgba(5,7,10,.62),transparent 58%)}
+  .hero-gradient{background:linear-gradient(90deg,rgba(5,7,10,.92),rgba(5,7,10,.58)),linear-gradient(0deg,rgba(5,7,10,.88),transparent 55%)}
   .hero-bottom{display:none}
   .statement,.director,.services,.works,.showreel,.process,.scale,.experience{padding:90px 0}
   .statement-grid,.director-grid,.showreel-grid,.scale-grid,.experience-grid,.contact-grid{grid-template-columns:1fr;gap:46px}
@@ -203,8 +203,8 @@ button{font:inherit}
 @media(max-width:620px){
   .hero-title{font-size:52px}
   .hero-copy br{display:none}
-  .hero-media img{object-position:56% center}
-  .hero-gradient{background:linear-gradient(90deg,rgba(5,7,10,.72),rgba(5,7,10,.28)),linear-gradient(0deg,rgba(5,7,10,.68),transparent 60%)}
+  .hero-media img{object-position:70% center}
+  .hero-gradient{background:linear-gradient(90deg,rgba(5,7,10,.94),rgba(5,7,10,.74)),linear-gradient(0deg,rgba(5,7,10,.92),transparent 60%)}
   .statement-main h2,.section-head h2{font-size:40px}
   .director-copy h2{font-size:52px}
   .bio-list>div{grid-template-columns:1fr;gap:8px}
@@ -236,7 +236,7 @@ button{font:inherit}
 .work-grid-v3 .work-overlay{padding:26px;background:linear-gradient(0deg,rgba(5,7,10,.9),rgba(5,7,10,.06) 66%)}
 .work-grid-v3 .work-overlay h3{font-size:clamp(20px,1.65vw,27px)}
 .work-grid-v3 .work-overlay p{color:#c5cad2}
-.hero-media img{object-position:50% center}
+.hero-media img{object-position:60% center}
 .showreel-frame img{object-position:center 28%}
 .contact-bg img{object-position:center 55%}
 @media(max-width:900px){
@@ -247,7 +247,7 @@ button{font:inherit}
   .work-grid-v3{grid-template-columns:1fr}
   .work-grid-v3 .work-card,.work-grid-v3 .work-card.work-wide{grid-column:auto;aspect-ratio:16/10}
   .work-grid-v3 .work-overlay{padding:20px}
-  .hero-media img{object-position:56% center}
+  .hero-media img{object-position:70% center}
 }
 
 
