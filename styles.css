@@ -380,3 +380,47 @@ button{font:inherit}
   .hero-actions{flex-direction:column;align-items:flex-start}
   .hero-actions .btn{width:auto}
 }
+
+
+/* v4.8.3 — mobile hero typography cleanup */
+@media (max-width: 768px){
+  .mobile-title-break{display:none!important}
+  .hero{
+    min-height:100svh;
+    padding:96px 0 64px;
+    align-items:flex-end;
+  }
+  .hero-content{
+    padding-bottom:2vh;
+  }
+  .hero-title{
+    font-size:31px;
+    line-height:1.12;
+    letter-spacing:-.04em;
+    max-width:100%;
+    margin-bottom:20px;
+    word-break:keep-all;
+  }
+  .hero-title span{
+    display:block;
+    white-space:nowrap;
+  }
+  .hero-copy{
+    font-size:14px;
+    line-height:1.65;
+    max-width:94%;
+    margin-bottom:22px;
+  }
+  .hero-actions .btn{
+    min-height:44px;
+    padding:0 16px;
+    font-size:12px;
+  }
+}
+
+@media (max-width: 390px){
+  .hero-title{font-size:29px}
+  .hero-copy{font-size:13.5px}
+  .hero-actions{gap:8px}
+  .hero-actions .btn{padding:0 14px}
+}
