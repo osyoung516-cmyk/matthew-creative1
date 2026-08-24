@@ -21,3 +21,5 @@ Matthew Creative portfolio website.
 - v4.9.2: Microsoft Clarity(y7isd6vxdf) + GA4(G-GRNVQK2Z5Y) 추가, GoatCounter 유지
 
 - v4.9.3: Umami Analytics 추가 (website id: 875d513d-4a09-43a6-b967-64c6a76df234)
+
+- v4.9.4: Instagram용 짧은 링크 /ig 추가 → UTM 추적 URL로 자동 이동
