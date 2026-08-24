@@ -34,8 +34,6 @@ backToTop?.addEventListener('click', (e) => {
   window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 });
 
-// GoatCounter visitor counter for osyoung88.goatcounter.com.
-// Fetch the public JSON counter and render only the number so the footer stays native to the site design.
 (() => {
   const todayEl = document.querySelector('#visitor-today');
   const totalEl = document.querySelector('#visitor-total');
@@ -76,3 +74,9 @@ backToTop?.addEventListener('click', (e) => {
   requestCount(counterBase, totalEl);
   requestCount(`${counterBase}?start=${encodeURIComponent(today)}&end=${encodeURIComponent(today)}`, todayEl);
 })();
+
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.site-footer iframe, .site-footer input, .site-footer textarea, .site-footer canvas, .site-footer .gcvc, .site-footer [class*="goatcounter"], .site-footer [id*="goatcounter"]').forEach((el) => {
+    if (!el.closest('.footer-traffic')) el.remove();
+  });
+});

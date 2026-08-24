@@ -230,7 +230,6 @@ button{font:inherit}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
-/* v3 — actual project frames */
 .work-grid-v3{grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .work-grid-v3 .work-card{aspect-ratio:16/10;border-radius:8px}
 .work-grid-v3 .work-card.work-wide{grid-column:span 2;aspect-ratio:16/7.9}
@@ -251,3 +250,12 @@ button{font:inherit}
   .hero-media img{object-position:58% center}
 }
 
+
+.site-footer iframe,
+.site-footer input,
+.site-footer textarea,
+.site-footer canvas,
+.site-footer .gcvc,
+.site-footer [class*="goatcounter"],
+.site-footer [id*="goatcounter"]{display:none!important;width:0!important;height:0!important;border:0!important;padding:0!important;margin:0!important}
+.footer-traffic strong{display:inline!important;background:transparent!important;border:0!important;box-shadow:none!important;padding:0!important;margin:0!important;width:auto!important;height:auto!important;min-width:0!important}
