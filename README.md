@@ -11,3 +11,5 @@ Matthew Creative portfolio website.
 - v4.8.5: GoatCounter TODAY/TOTAL을 실제 홈 경로(/) 카운터로 수정하고 캐시 방지 처리
 
 - v4.8.6: GoatCounter TOTAL/TODAY CORS 대응 및 실제 사이트 전체 카운트 표시 수정
+
+- v4.8.7: TODAY/TOTAL 공개 카운터 유지 (GoatCounter 캐시 지연 허용)
