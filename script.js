@@ -39,36 +39,32 @@ backToTop?.addEventListener('click', (e) => {
   const totalEl = document.querySelector('#visitor-total');
   if (!todayEl || !totalEl) return;
 
-  // GoatCounter visitor counter URLs are path-specific. This site is a
-  // single-page portfolio, so TODAY/TOTAL should read the actual home path (/),
-  // not a literal path named "TOTAL".
-  const pagePath = '/';
-  const counterBase = `https://osyoung88.goatcounter.com/counter/${encodeURIComponent(pagePath)}.json`;
+  // GoatCounter's special TOTAL path returns site-wide totals.
+  // Keep this request simple: custom request headers trigger a CORS preflight
+  // in embedded browsers such as KakaoTalk, which can cause the counter to fail.
+  const counterBase = 'https://osyoung88.goatcounter.com/counter/TOTAL.json';
+
   const formatCount = (value) => {
     const normalized = String(value ?? '').replace(/[\s,\u00a0\u202f]/g, '');
     const n = Number(normalized);
-    return Number.isFinite(n) ? new Intl.NumberFormat('ko-KR').format(n) : (value || '—');
+    return Number.isFinite(n) ? new Intl.NumberFormat('ko-KR').format(n) : '—';
   };
 
-  const requestCount = (url, target) => {
-    const req = new XMLHttpRequest();
-    req.addEventListener('load', function () {
-      try {
-        if (this.status < 200 || this.status >= 300) throw new Error(`HTTP ${this.status}`);
-        const data = JSON.parse(this.responseText);
-        target.textContent = formatCount(data.count);
-      } catch (err) {
-        target.textContent = '—';
-        console.warn('GoatCounter visitor counter:', err);
-      }
-    });
-    req.addEventListener('error', function () {
+  const requestCount = async (url, target) => {
+    try {
+      const response = await fetch(url, {
+        method: 'GET',
+        mode: 'cors',
+        credentials: 'omit',
+        cache: 'no-store'
+      });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      target.textContent = formatCount(data.count);
+    } catch (err) {
       target.textContent = '—';
-    });
-    const separator = url.includes('?') ? '&' : '?';
-    req.open('GET', `${url}${separator}_=${Date.now()}`);
-    req.setRequestHeader('Cache-Control', 'no-cache');
-    req.send();
+      console.warn('GoatCounter visitor counter:', err);
+    }
   };
 
   const now = new Date();
