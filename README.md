@@ -54,3 +54,5 @@ Matthew Creative portfolio website.
 - v5.2.0: Festivals & Awards를 동일 폭 카드의 flex-wrap 구조로 변경해 4개 + 3개 두 번째 줄이 정확히 중앙 정렬되도록 수정. Director EDUCATION/EXPERIENCE/PRODUCTION 본문 폰트를 동일하게 통일. 모바일에서도 동일 규칙으로 재정리. CSP에 media/worker/manifest 제한을 추가하고, 실제 페이지에서 사용하지 않는 레거시 이미지 23개를 배포본에서 제거해 용량을 최적화.
 
 - v5.2.1: /ig 인스타그램 단축 주소의 중간 안내 화면 제거. head에서 즉시 location.replace() 실행하고 meta refresh는 JS 비활성 시 fallback으로만 유지.
+
+- v5.2.2: Case Study 우측 이미지를 장안대학교 패션주얼리디자인과 이미지로 교체해 Selected Work와의 중복 사용 제거. 원본 이미지는 AI 수정 없이 WebP 최적화만 적용.
