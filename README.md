@@ -50,3 +50,7 @@ Matthew Creative portfolio website.
 - v5.1.8: Director 소개문 중복 제거. EXPERIENCE를 한 줄로 통합하고 가독성에 맞게 크기 조정. Selected Work / Process / Why Matthew / Bio 행의 데스크톱 hover 인터랙션 복원.
 
 - v5.1.9: v5.1.8의 PC 수정사항을 모바일에도 동기화. Selected Work, QR CTA, Services, Why Matthew, Process, Director, Festivals & Awards, Contact의 여백/폰트/카드 크기/터치 피드백을 모바일 화면에 맞게 전반 최적화.
+
+- v5.2.0: Festivals & Awards를 동일 폭 카드의 flex-wrap 구조로 변경해 4개 + 3개 두 번째 줄이 정확히 중앙 정렬되도록 수정. Director EDUCATION/EXPERIENCE/PRODUCTION 본문 폰트를 동일하게 통일. 모바일에서도 동일 규칙으로 재정리. CSP에 media/worker/manifest 제한을 추가하고, 실제 페이지에서 사용하지 않는 레거시 이미지 23개를 배포본에서 제거해 용량을 최적화.
+
+- v5.2.1: /ig 인스타그램 단축 주소의 중간 안내 화면 제거. head에서 즉시 location.replace() 실행하고 meta refresh는 JS 비활성 시 fallback으로만 유지.

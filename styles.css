@@ -733,3 +733,136 @@ button{font:inherit;color:inherit}
     gap:10px !important;
   }
 }
+
+
+/* v5.2.0 — balanced awards + unified director typography + responsive polish */
+
+/* DIRECTOR: all three bio rows use the exact same typography */
+.bio-list p,
+.experience-copy{
+  margin:0 !important;
+  color:#d2d6de !important;
+  font-size:13px !important;
+  line-height:1.55 !important;
+  font-weight:400 !important;
+  letter-spacing:0 !important;
+  white-space:normal !important;
+}
+
+/* FESTIVALS & AWARDS: equal-width cards; wrapped rows are centered automatically */
+.award-grid{
+  display:flex !important;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:stretch;
+  gap:12px !important;
+}
+.award,
+.award:nth-child(5),
+.award:nth-child(6),
+.award:nth-child(7){
+  flex:0 0 calc((100% - 36px) / 4);
+  width:auto !important;
+  max-width:none !important;
+  grid-column:auto !important;
+  box-sizing:border-box;
+}
+.award-laurel-wrap{
+  width:100%;
+}
+.award-center{
+  min-width:0;
+}
+
+/* Desktop hover/focus: restore premium interactive feel without affecting touch */
+@media (hover:hover) and (pointer:fine){
+  .award{
+    transition:transform .25s ease,border-color .25s ease,background .25s ease,box-shadow .25s ease;
+  }
+  .award:hover,
+  .award:focus-within{
+    transform:translateY(-4px) !important;
+    border-color:rgba(167,156,255,.34) !important;
+    background:rgba(255,255,255,.026) !important;
+    box-shadow:0 16px 36px rgba(0,0,0,.16);
+  }
+}
+
+/* Tablet: 2 per row, last odd card centered */
+@media (max-width:1000px) and (min-width:769px){
+  .award,
+  .award:nth-child(5),
+  .award:nth-child(6),
+  .award:nth-child(7){
+    flex:0 0 calc((100% - 12px) / 2);
+  }
+  .award:last-child:nth-child(odd){
+    flex-basis:calc((100% - 12px) / 2);
+  }
+}
+
+/* Mobile: one column, consistent text and breathing room */
+@media (max-width:768px){
+  .award-grid{
+    display:flex !important;
+    flex-direction:column;
+    gap:0 !important;
+  }
+  .award,
+  .award:nth-child(5),
+  .award:nth-child(6),
+  .award:nth-child(7){
+    flex:0 0 auto;
+    width:100% !important;
+    min-height:164px !important;
+  }
+
+  .bio-list>div{
+    grid-template-columns:92px minmax(0,1fr) !important;
+    gap:14px !important;
+  }
+  .bio-list p,
+  .experience-copy{
+    font-size:12.8px !important;
+    line-height:1.62 !important;
+    letter-spacing:0 !important;
+    white-space:normal !important;
+    word-break:keep-all;
+  }
+
+  .director-lead{
+    max-width:100%;
+    word-break:keep-all;
+  }
+
+  .selected-work-card,
+  .service-card,
+  .why-card,
+  .process-list li,
+  .award{
+    -webkit-tap-highlight-color:transparent;
+  }
+}
+
+@media (max-width:430px){
+  .bio-list>div{
+    grid-template-columns:88px minmax(0,1fr) !important;
+    gap:12px !important;
+  }
+  .bio-list p,
+  .experience-copy{
+    font-size:12.4px !important;
+  }
+}
+
+@media (max-width:390px){
+  .bio-list>div{
+    grid-template-columns:84px minmax(0,1fr) !important;
+    gap:10px !important;
+  }
+  .bio-list p,
+  .experience-copy{
+    font-size:12px !important;
+    line-height:1.58 !important;
+  }
+}
