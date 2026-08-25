@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /ig/
+
+Sitemap: https://matthewfilm.net/sitemap.xml

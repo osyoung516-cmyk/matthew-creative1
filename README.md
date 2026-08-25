@@ -23,3 +23,16 @@ Matthew Creative portfolio website.
 - v4.9.3: Umami Analytics 추가 (website id: 875d513d-4a09-43a6-b967-64c6a76df234)
 
 - v4.9.4: Instagram용 짧은 링크 /ig 추가 → UTM 추적 URL로 자동 이동
+
+## v5.0.0 — Marketing structure / optimization / security
+- 메인 구조를 문의 전환형으로 재배치: Hero → Selected Work/Showreel → Services → Why Matthew Creative → Case Study → CTA → Process → Director → Recognition → Contact
+- Selected Work는 우선 전체 포트폴리오(YouTube 쇼릴) 단일 링크로 연결. 추후 작품별 상세 링크로 교체 가능
+- CTA 클릭을 GA4 / Umami / Clarity 커스텀 이벤트로 동시 기록
+- 이미지 width/height, lazy-loading, hero preload, content-visibility 적용
+- CSP, referrer policy, noopener+noreferrer 적용 및 inline 추적 스크립트 제거
+- robots.txt / sitemap.xml / .well-known/security.txt 추가
+- Instagram /ig UTM 리디렉션 유지
+
+- v5.1.0: 사용자가 지정한 히어로 원본 사진 적용. 얼굴/피사체 AI 수정 없음. 데스크톱은 전체 프레임 유지, 모바일은 동일 원본의 크롭만 사용. 작동 확인용 YouTube 포트폴리오 QR 재생성.
+
+- v5.1.1: RECOGNITION을 FESTIVALS & AWARDS로 개편. 영화제 진출/상영/수상 성격을 반영하고 각 기록에 월계수 엠블럼을 추가. 다크 시네마틱 스타일 유지.
