@@ -36,3 +36,7 @@ Matthew Creative portfolio website.
 - v5.1.0: 사용자가 지정한 히어로 원본 사진 적용. 얼굴/피사체 AI 수정 없음. 데스크톱은 전체 프레임 유지, 모바일은 동일 원본의 크롭만 사용. 작동 확인용 YouTube 포트폴리오 QR 재생성.
 
 - v5.1.1: RECOGNITION을 FESTIVALS & AWARDS로 개편. 영화제 진출/상영/수상 성격을 반영하고 각 기록에 월계수 엠블럼을 추가. 다크 시네마틱 스타일 유지.
+
+- v5.1.3: 디렉터 사진 교체(사용자 원본 그대로), Selected Work 6개를 정적 카드로 변경하여 개별/반복 YouTube 링크 제거, 실제 작동 QR만 전체 포트폴리오 진입점으로 유지, Festivals & Awards를 데스크톱 4+3 중앙 정렬 구조로 재배치.
+
+- v5.1.4: Services / Process / Director 주요 소개 문장의 줄바꿈을 지정된 위치로 고정해 PC·모바일 문장 호흡 정리.
