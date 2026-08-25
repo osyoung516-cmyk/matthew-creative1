@@ -224,3 +224,129 @@ button{font:inherit;color:inherit}
     gap:16px;
   }
 }
+
+
+/* v5.1.6 — Director mobile refinement */
+@media (max-width:768px){
+  .director{
+    padding-top:72px;
+    padding-bottom:78px;
+  }
+  .director-grid{
+    gap:30px;
+  }
+  .director-photo{
+    width:min(100%, 420px);
+    max-width:none;
+    margin:0 auto;
+  }
+  .director-photo:after{
+    inset:10px -10px -10px 10px;
+  }
+  .director-copy{
+    min-width:0;
+  }
+  .director-copy .section-kicker{
+    margin-bottom:18px;
+  }
+  .director-copy h2{
+    font-size:42px;
+    line-height:1.04;
+    margin-bottom:20px;
+  }
+  .director-copy h2 small{
+    font-size:.5em;
+    margin-top:9px;
+  }
+  .director-lead{
+    max-width:none;
+    margin-bottom:28px;
+    font-size:13.7px;
+    line-height:1.9;
+    letter-spacing:-.025em;
+  }
+  .director-lead .copy-mobile{
+    display:block;
+  }
+  .director-lead .copy-desktop{
+    display:none;
+  }
+  .director-lead .copy-mobile > span{
+    display:block;
+    white-space:nowrap;
+  }
+  .bio-list>div{
+    grid-template-columns:92px minmax(0,1fr);
+    gap:16px;
+    padding:15px 0;
+  }
+  .bio-list span{
+    padding-top:2px;
+  }
+  .bio-list p{
+    font-size:12.7px;
+    line-height:1.65;
+    word-break:keep-all;
+  }
+}
+@media (max-width:430px){
+  .director-copy h2{
+    font-size:39px;
+  }
+  .director-lead{
+    font-size:13.2px;
+  }
+  .director-photo{
+    width:100%;
+  }
+}
+@media (max-width:390px){
+  .director-lead{
+    font-size:12.7px;
+    letter-spacing:-.035em;
+  }
+}
+
+
+/* v5.1.7 — Director photo + name lockup + experience line composition */
+.director-name{
+  display:flex;
+  align-items:baseline;
+  gap:.28em;
+  flex-wrap:nowrap;
+}
+.director-name small{
+  display:inline !important;
+  margin:0 !important;
+  white-space:nowrap;
+}
+.bio-line{
+  display:block;
+  white-space:nowrap;
+}
+@media (max-width:768px){
+  .director-name{
+    display:flex;
+    align-items:baseline;
+    gap:.26em;
+    flex-wrap:nowrap;
+  }
+  .director-copy h2.director-name small{
+    display:inline !important;
+    margin-top:0 !important;
+    font-size:.48em;
+    line-height:1;
+  }
+  .bio-list p{
+    min-width:0;
+  }
+  .bio-line{
+    display:block;
+    white-space:nowrap;
+  }
+}
+@media (max-width:390px){
+  .bio-line{
+    white-space:normal;
+  }
+}
