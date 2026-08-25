@@ -40,3 +40,5 @@ Matthew Creative portfolio website.
 - v5.1.3: 디렉터 사진 교체(사용자 원본 그대로), Selected Work 6개를 정적 카드로 변경하여 개별/반복 YouTube 링크 제거, 실제 작동 QR만 전체 포트폴리오 진입점으로 유지, Festivals & Awards를 데스크톱 4+3 중앙 정렬 구조로 재배치.
 
 - v5.1.4: Services / Process / Director 주요 소개 문장의 줄바꿈을 지정된 위치로 고정해 PC·모바일 문장 호흡 정리.
+
+- v5.1.5: 히어로 제목을 '기획부터 촬영, 편집까지 / 한 명의 디렉터가 완성하는 / 영상 제작' 3줄로 고정하고, 전체 포트폴리오 YouTube로 연결되는 단일 CTA 버튼 추가.
