@@ -45,4 +45,8 @@ Matthew Creative portfolio website.
 
 - v5.1.6: 모바일 Director 섹션 재정리. 소개 문장을 모바일에서 정확히 2줄로 고정하고, 사진/제목/본문/경력표 간격과 크기를 작은 화면에 맞게 최적화.
 
-- v5.1.7: Director 사진을 사용자가 제공한 고화질 원본으로 교체(생성형 수정 없음). '오세영 /Director'를 한 줄에 고정하고 EXPERIENCE 문구를 '영화 · TV CF 촬영팀을 거쳐 / 영상 제작 전 공정 수행' 2줄로 정리.
+- v5.1.7: Director 사진을 새 고화질 원본으로 교체, '오세영 / Director'를 한 줄로 고정, EXPERIENCE 문구를 '영화 · TV CF 촬영팀을 거쳐 / 영상 제작 전 공정 수행' 2줄로 정리.
+
+- v5.1.8: Director 소개문 중복 제거. EXPERIENCE를 한 줄로 통합하고 가독성에 맞게 크기 조정. Selected Work / Process / Why Matthew / Bio 행의 데스크톱 hover 인터랙션 복원.
+
+- v5.1.9: v5.1.8의 PC 수정사항을 모바일에도 동기화. Selected Work, QR CTA, Services, Why Matthew, Process, Director, Festivals & Awards, Contact의 여백/폰트/카드 크기/터치 피드백을 모바일 화면에 맞게 전반 최적화.
