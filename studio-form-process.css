@@ -1,0 +1,19 @@
+#process .process-list > li {
+  list-style: none;
+}
+#process .process-list > li::marker {
+  content: "";
+}
+#brief #preferred-schedule {
+  display: block;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  color: #f7f6f2;
+  background: #171c24;
+  border: 1px solid #828a96;
+}
+#brief #preferred-schedule::placeholder {
+  color: #bdc4cc;
+  opacity: 1;
+}
