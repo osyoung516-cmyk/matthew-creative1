@@ -14,7 +14,7 @@ window.studio = {
   ],
   // 역할은 프로젝트별 실제 담당 범위로 입력하세요.
   works: [
-    {title:"병원 영상 콘텐츠", purpose:"환자에게 시술과 진료 정보를 전달하는 콘텐츠 제작", role:"", result:"7개월간 병원 영상 제작", image:"work-hospital.webp", alt:"요양병원 사람들 영상에서 마스크를 쓴 인물이 창가에 서 있는 장면", url:""},
+    {title:"병원 영상 콘텐츠", purpose:"환자에게 시술과 진료 정보를 전달하는 콘텐츠 제작", role:"", result:"병원 및 전문직 영상 제작", image:"./work-hospital.webp", alt:"요양병원 사람들 영상에서 마스크를 쓴 인물이 창가에 서 있는 장면", url:""},
     {title:"대학 학과 CF", purpose:"학과의 분위기와 전공의 매력을 예비 신입생에게 소개", role:"", result:"대학 학과 홍보 CF 제작", image:"work-campus-promo.webp", alt:"백석문화대학교 미디어영상학부 홍보영상 장면", url:""},
     {title:"호텔 홍보영상", purpose:"객실과 공간의 분위기를 영상으로 소개", role:"", result:"호텔 홍보영상 제작", image:"work-signiel.webp", alt:"호텔 홍보영상에 담긴 공간", url:""},
     {title:"공연 스케치 영상", purpose:"한국기술교육대학교 축제의 공연과 관객을 기록", role:"", result:"축제 현장 스케치 영상", image:"work-koreatech-festival-new.webp", alt:"한국기술교육대학교 축제 공연 장면", url:""},

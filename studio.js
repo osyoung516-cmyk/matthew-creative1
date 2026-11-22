@@ -50,7 +50,7 @@ function embedLink(raw) {
   return /^[\w-]{11}$/.test(id || '') ? 'https://www.youtube-nocookie.com/embed/' + id : null;
 }
 const reel = embedLink(config.reel);
-if (reel) {
+if (reel && document.querySelector('#reel iframe')?.src !== reel) {
   const frame = el('iframe');
   frame.src = reel;
   frame.title = '매튜크리에이티브 대표 쇼릴';
@@ -58,6 +58,7 @@ if (reel) {
   frame.loading = 'lazy';
   document.querySelector('#reel').replaceChildren(frame);
 }
+document.querySelector('#work-grid').replaceChildren();
 for (const work of config.works) {
   const card = el('article', '', 'work');
   const body = el('div', '', 'body');
@@ -65,7 +66,7 @@ for (const work of config.works) {
     const img = el('img');
     img.alt = work.alt;
     img.loading = 'lazy';
-    img.src = 'assets/' + work.image;
+    img.src = work.image.startsWith('./') ? work.image : 'assets/' + work.image;
     card.append(img);
   } else card.append(el('div', 'MEDICAL FILM', 'cover'));
   body.append(el('h3', work.title));
