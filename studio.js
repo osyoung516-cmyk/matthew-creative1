@@ -93,11 +93,7 @@ for (const [service,price] of Object.entries(config.prices)) {
   row.append(el('dt',service),el('dd',typeof price === 'number' ? price.toLocaleString('ko-KR')+'만원~' : '별도 문의'));
   document.querySelector('#prices').append(row);
 }
-for (const review of config.reviews) {
-  const card = el('blockquote');
-  card.append(el('p',review.quote || '후기 등록 예정'),el('cite',review.client));
-  document.querySelector('#reviews').append(card);
-}
+document.querySelector('#reviews')?.closest('.newstudio')?.remove();
 for (const [question,answer] of config.faq) {
   const details = el('details');
   details.append(el('summary',question),el('p',answer));
