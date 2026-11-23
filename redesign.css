@@ -153,7 +153,7 @@ iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
   .columns, .director, .work-row, #brief { grid-template-columns: minmax(0,1fr); gap: 20px; }
   .work-row img { max-width: 400px; }
   .director { padding-block: 32px; }
-  main br { display: none; }
+  main p br { display: none; }
   body { --chat-height: 36px; --chat-bottom: max(12px, env(safe-area-inset-bottom)); }
   .floating {
     height: var(--chat-height);
