@@ -93,17 +93,16 @@ main section[id] { scroll-margin-top: 24px; }
 .works, .faq { margin-top: 28px; }
 .work-row {
   display: grid;
-  grid-template-columns: minmax(0,400px) minmax(0,1fr) auto;
+  grid-template-columns: minmax(0,400px) minmax(0,1fr);
   align-items: center;
   gap: 24px;
   padding: 20px;
   background: var(--panel);
 }
-.video-link { color: var(--accent); white-space: nowrap; }
 .director { grid-template-columns: 280px minmax(0,1fr); padding-block: 56px; }
 .director img { object-fit: cover; aspect-ratio: 1; }
 .festivals { list-style: none; padding: 0; margin: 24px 0; display: grid; gap: 10px; }
-.festivals span { margin-right: .65em; }
+.festivals li { display: grid; grid-template-columns: 52px minmax(0, 1fr); align-items: baseline; }
 .prices > div { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 16px; background: var(--panel); }
 .prices dd { font-weight: 700; white-space: nowrap; }
 details { background: var(--panel); }
@@ -145,7 +144,7 @@ dialog {
 dialog::backdrop { background: var(--background); }
 .reel-actions { justify-content: space-between; margin-bottom: 12px; }
 iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
-@media (max-width: 768px) {
+@media (width < 768px) {
   :root { --gutter: 20px; --section-gap: 96px; --display: 30px; --heading: 28px; --body: 16px; }
   .header { flex-wrap: wrap; gap: 12px; justify-content: space-between; }
   .header nav { order: 1; margin-left: 0; width: 100%; gap: 8px 18px; }
@@ -153,7 +152,20 @@ iframe { display: block; width: 100%; aspect-ratio: 16 / 9; border: 0; }
   .hero-image .button { bottom: 12px; left: 12px; }
   .columns, .director, .work-row, #brief { grid-template-columns: minmax(0,1fr); gap: 20px; }
   .work-row img { max-width: 400px; }
-  .work-row a { justify-self: start; }
   .director { padding-block: 32px; }
-  .footer { display: grid; gap: 8px; }
+  main br { display: none; }
+  body { --chat-height: 36px; --chat-bottom: max(12px, env(safe-area-inset-bottom)); }
+  .floating {
+    height: var(--chat-height);
+    min-height: var(--chat-height);
+    padding: 0 12px;
+    font-size: var(--small);
+    bottom: var(--chat-bottom);
+    right: max(12px, env(safe-area-inset-right));
+  }
+  .footer {
+    display: grid;
+    gap: 8px;
+    padding-bottom: calc(26px + var(--chat-height) + var(--chat-bottom));
+  }
 }

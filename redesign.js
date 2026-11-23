@@ -2,16 +2,21 @@
 
 const showreel = document.querySelector('#showreel');
 const showreelTrigger = document.querySelector('#showreel-trigger');
-const player = showreel.querySelector('iframe');
 if (typeof showreel.showModal === 'function') {
   showreelTrigger.addEventListener('click', (event) => {
     if (event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
     event.preventDefault();
+    const player = document.createElement('iframe');
+    player.title = '매튜크리에이티브 대표 쇼릴';
+    player.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+    player.allowFullscreen = true;
+    player.referrerPolicy = 'strict-origin-when-cross-origin';
     player.src = 'https://www.youtube-nocookie.com/embed/D97XtKVZrRY?autoplay=1';
+    showreel.append(player);
     showreel.showModal();
   });
   showreel.addEventListener('close', () => {
-    player.removeAttribute('src');
+    showreel.querySelector('iframe')?.remove();
     showreelTrigger.focus();
   });
 }
